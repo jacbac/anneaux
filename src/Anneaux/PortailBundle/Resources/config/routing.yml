@@ -1,0 +1,7 @@
+# src/Anneaux/PortailBundle/Resources/config/routing.yml
+
+homepage:
+  pattern:  /
+  defaults: { _controller: PortailBundle:Page:index }
+  requirements:
+      _method:  GET

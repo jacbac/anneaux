@@ -1,0 +1,174 @@
+/*
+Theme Name: Portail
+Description: A responsive WordPress theme.
+Author: Twitter@Jacbac
+Author URI: http://neilorangepeel.com
+Version: 1
+*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section, img {
+  display: block;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+[id*='attachment_'] {
+  max-width: 100% !important;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  float: none;
+  margin: 0 auto; 
+}
+
+.clear { clear: both;
+}
+
+html {
+  font: normal 112.5%/1.65 serif;
+}
+
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  font-family: "Alegreya", Georgia, serif;
+  font-weight: 400;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+h1, .h1 {
+  font-size: 2.4em;
+}
+
+h2, .h2 {
+  font-size: 2.2em;
+}
+
+h3, .h3 {
+  font-size: 2em;
+}
+
+h4, .h4 {
+  font-size: 1.8em;
+}
+
+h5, .h5, h6, .h6 {
+  font-size: 1.6em;
+}
+
+p {
+  margin-bottom: 1.6em;
+}
+
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  margin-top: 1.6em;
+}
+
+a {
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  color: steelblue;
+  text-decoration: none; }
+  a:hover, a:focus {
+    text-decoration: underline;
+}
+
+ul, ol, ul ul, ul ol, ol ol, ol ul {
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+body {
+  font-size: 23px;
+}
+ 
+@media (max-width: 43em) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.section-wrap {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.header .main-nav {
+float: right;
+width: 70%;
+text-align: right;
+}
+
+.header .main-nav ul {
+margin: 0;
+padding: 0;
+}
+
+.header .main-nav li {
+display: inline-block;
+margin-left: 5%;
+}
+
+.header a {
+color: #222;
+}
+
+.header .main-nav a {
+font-style: italic;
+}

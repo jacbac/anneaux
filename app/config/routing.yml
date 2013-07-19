@@ -1,0 +1,4 @@
+portail:
+    resource: "@PortailBundle/Resources/config/routing.yml"
+    prefix:   /
+

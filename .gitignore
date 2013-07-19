@@ -1,0 +1,12 @@
+# symfony files
+vendor/*
+app/cache/*
+app/logs/*
+*~
+
+# config files
+/app/config/parameters.yml
+
+# other
+.DS_Store
+Thumbs.db
