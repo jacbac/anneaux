@@ -25,7 +25,7 @@ class Blog
   /**
    * @ORM\Column(type="string", length=60)
    */
-  protected $author;
+  protected $auteur;
 
   /**
    * @ORM\Column(type="text")
@@ -90,26 +90,26 @@ class Blog
   }
 
   /**
-   * Set author
+   * Set auteur
    *
-   * @param string $author
+   * @param string $auteur
    * @return Blog
    */
-  public function setAuthor($author)
+  public function setAuteur($auteur)
   {
-      $this->author = $author;
+      $this->auteur = $auteur;
   
       return $this;
   }
 
   /**
-   * Get author
+   * Get auteur
    *
    * @return string 
    */
-  public function getAuthor()
+  public function getAuteur()
   {
-      return $this->author;
+      return $this->auteur;
   }
 
   /**
