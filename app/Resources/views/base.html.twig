@@ -1,12 +1,11 @@
 <!-- app/Resources/views/base.html.twig -->
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
-  <title>Anneaux de la Mémoire - {% block title %}Blog{% endblock %}</title>
-  <meta name="title" content="Balance - Free responsive theme by Tink Tank">
-  <meta name="description" content="Free responsive theme by Tink Tank">
+  <title>Anneaux de la Mémoire | {% block title %}{% endblock %}</title>
+  <meta name="title" content="Anneaux de la Mémoire">
+  <meta name="description" content="Association des Anneaux de la Mémoire">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% block stylesheets %}
@@ -16,7 +15,6 @@
   <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
 {% endblock %}
 
-
   <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
 
   <!--[if lt IE 9]>
@@ -25,52 +23,17 @@
 </head>
 <body>
 
-  <header class="header" role="banner">
-    <div class="section-wrap group">
-      <a href="#">
-        <img src="http://tinktank.in/demo/balance/wp-content/uploads/2013/05/balance-logo.svg" alt="Logo" class="logo">
-      </a>
-      <nav class="main-nav" role="navigation">
-        <div class="menu-main_nav-container">
-          <ul id="menu-main_nav" class="menu">
-            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-39">
-              <a href="http://tinktank.in/demo/balance/">Accueil</a>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35">
-              <a href="http://tinktank.in/demo/balance/about/">A Propos</a>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36">
-              <a href="http://tinktank.in/demo/balance/contact/">Contact</a>
-            </li>
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38">
-              <a href="http://tinktank.in/demo/balance/category/archive/">Archive</a>
-            </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
-              <a href="https://creativemarket.com/tinktank/8416-Balance-Responsive-WordPress-Theme">Download →</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+  {% block header %}
+  {% endblock %}
 
-  <section class="main-col">
-    {% block body %}{% endblock %}
-  </section>
+  {% block body %}
+  {% endblock %}
 
-  <aside class="sidebar">
-    {% block sidebar %}
-      Sidebar
-    {% endblock %}
-  </aside>
+  {% block footer %}
+  {% endblock %}
 
-  <footer>
-    {% block footer %}
-        Footer
-    {% endblock %}
-  </footer>
-
-  {% block javascripts %}{% endblock %}
+  {% block javascripts %}
+  {% endblock %}
 
 </body>
 </html>

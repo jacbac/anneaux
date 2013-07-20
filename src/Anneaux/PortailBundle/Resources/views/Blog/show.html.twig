@@ -1,0 +1,32 @@
+{# src/Anneaux/PortailBundle/Resources/views/Blog/show.html.twig #}
+{% extends 'PortailBundle::layout.html.twig' %}
+
+{% block title %}
+  Blog - {{ blog.title }}
+{% endblock %}
+
+{% block body %}
+  <div class="section-wrap page-wrap">
+    <article class="post">
+      <h1 class="post-title">{{ blog.title }}</h1>
+      <time class="date" datetime="{{ blog.created|date('c') }}">Publié le {{ blog.created|date('l, F j, Y') }}</time>
+      <p>{{ blog.blog }}</p>
+      <p>
+        <a href="#">
+          <img src="http://placehold.it/600x400.png" data-1x="http://placehold.it/900x600.png" data-2x="http://placehold.it/600x400.png" width="1024" height="682" alt="picto">
+        </a>
+      </p>
+      <p>Auteur : <a href="/blog/auteur/bachelier-jacques/" rel="tag">Jacques Bachelier</a></p>
+      <p>Publié le : <a href="/blog/date/2013-05-11" rel="tag">11 mai 2013</a></p>
+      <p>Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blog</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></p>
+    </article>
+    <div class="pagination group">
+      <p class="alignleft">
+         <a href="blog/page/1/">» Article précédent</a>
+      </p>
+      <p class="alignright">
+        <a href="blog/page/2/">Article suivant »</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,6 +1,42 @@
 {# src/Anneaux/PortailBundle/Resources/views/layout.html.twig #}
 {% extends '::base.html.twig' %}
 
-{% block sidebar %}
-    Sidebar content
+{% block header %}
+  <header class="header" role="banner">
+    <div class="section-wrap group">
+      <a href="#">
+        <img src="http://tinktank.in/demo/balance/wp-content/uploads/2013/05/balance-logo.svg" alt="Logo" class="logo">
+      </a>
+      <nav class="main-nav" role="navigation">
+        <div class="menu-main_nav-container">
+          <ul id="menu-main_nav" class="menu">
+            <li class="">
+              <a href="#">Accueil</a>
+            </li>
+            <li class="">
+              <a href="#about/">A Propos</a>
+            </li>
+            <li class="">
+              <a href="#contact/">Contact</a>
+            </li>
+            <li class="">
+              <a href="#category/archive/">Archive</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+{% endblock %}
+
+{% block footer %}
+  <footer class="footer">
+    <section class="social-icons">
+      <a href="https://twitter.com/tinktankin" title="Twitter"><i aria-hidden="true" data-icon="t"></i><span>Twitter</span></a>
+      <a href="https://www.facebook.com/tinktankin" title="Facebook"><i aria-hidden="true" data-icon="f"></i><span>Facebook</span></a>
+      <a href="https://vimeo.com/tinktank" title="Vimeo"><i aria-hidden="true" data-icon="v"></i><span>Vimeo</span></a>
+      <a href="https://github.com/TinkTank" title="GitHub"><i aria-hidden="true" data-icon="h"></i><span>GitHub</span></a>
+    </section>
+    <small>© 2013 Anneaux de la Mémoire</small>
+  </footer>
 {% endblock %}
