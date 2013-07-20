@@ -1,7 +1,7 @@
 Portail Edition
 ========================
 
-Welcome to the Portail Edition - a totally-fully-functional Symfony2
+Welcome to the Portail Edition - a totally-absolutely-not-fully-functional Symfony2
 application that you can use at your risk !
 
 This document contains information on how to download, install, and start
