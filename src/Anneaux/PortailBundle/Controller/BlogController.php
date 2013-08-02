@@ -9,7 +9,18 @@ class BlogController extends Controller
 {
   public function indexAction()
   {
-    return $this->render('PortailBundle:Blog:index.html.twig');
+    $em = $this->getDoctrine()->getManager();
+
+    $blogs = $em->getRepository('PortailBundle:Blog')->findAll();
+
+    if (!$blogs)
+    {
+      throw $this->createNotFoundException('Unable to find Blog posts.');
+    }
+
+    return $this->render('PortailBundle:Blog:show.html.twig', array(
+      'blogs' => $blogs,
+    ));
   }
 
   /**

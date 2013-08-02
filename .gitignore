@@ -16,3 +16,5 @@ app/config/parameters.yml
 .DS_Store
 Thumbs.db
 *~
+
+!*.gitkeep

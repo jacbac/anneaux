@@ -1,0 +1,10 @@
+portail:
+  extensions:
+    Behat\Symfony2Extension\Extension:
+      bundle: PortailBundle
+      mink_driver: true
+    Behat\MinkExtension\Extension:
+      default_session: 'symfony2',
+      base_url: http://anneaux/
+      zombie: ~
+      javascript_session: zombie

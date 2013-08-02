@@ -16,16 +16,16 @@
           <img src="http://placehold.it/600x400.png" data-1x="http://placehold.it/900x600.png" data-2x="http://placehold.it/600x400.png" width="1024" height="682" alt="picto">
         </a>
       </p>
-      <p>Auteur : <a href="/blog/auteur/bachelier-jacques/" rel="tag">Jacques Bachelier</a></p>
+      <p>Auteur : <a href="/blog/auteur/bachelier-jacques/" rel="tag">{{ blog.auteur }}</a></p>
       <p>Publié le : <a href="/blog/date/{{ blog.created|date('Y-m-d') }}" rel="tag">{{ blog.created|date('j F Y') }}</a></p>
-      <p>Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blog</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></p>
+      <p>Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blogz</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></p>
     </article>
     <div class="pagination group">
       <p class="alignleft">
-         <a href="blog/page/1/">&laquo; Article précédent</a>
+         <a href="1/">&laquo; Article précédent</a>
       </p>
       <p class="alignright">
-        <a href="blog/page/2/">Article suivant &raquo;</a>
+        <a href="2/">Article suivant &raquo;</a>
       </p>
     </div>
   </div>

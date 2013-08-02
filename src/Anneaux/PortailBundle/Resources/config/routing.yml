@@ -1,14 +1,12 @@
 # src/Anneaux/PortailBundle/Resources/config/routing.yml
 
 blog_index:
-  pattern:  /
+  pattern:  /blog
   defaults: { _controller: PortailBundle:Blog:index }
-  requirements:
-      _method:  GET
 
 blog_show:
-  pattern:  /{id}
+  pattern:  /blog/{id}
   defaults: { _controller: PortailBundle:Blog:show }
   requirements:
-      _method:  GET
-      id: \d+
+    _method:  GET
+    id: \d+
