@@ -5,230 +5,323 @@ Author: Twitter@Jacbac
 Author URI: http://neilorangepeel.com
 Version: 1
 */
-
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-article, aside, figure, footer, header, hgroup, nav, section, img {
-  display: block;
-}
-
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
-
 html {
-  overflow-y: scroll;
-}
-
-[id*='attachment_'] {
-  max-width: 100% !important;
-}
-
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.alignleft {
-  float: left;
-}
-
-.alignright {
-  float: right;
-}
-
-.aligncenter {
-  float: none;
-  margin: 0 auto; 
-}
-
-.clear { clear: both;
-}
-
-html {
-  font: normal 112.5%/1.65 serif;
+  font: normal 100% serif;
 }
 
 body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+  font-family: 'Alegreya', Georgia, serif;
+  font-weight: 400;
   word-wrap: break-word;
-  font-family: "Alegreya", Georgia, serif;
-  font-weight: 400;
-  color: #222;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.2em;
-  margin-bottom: 0.4em;
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Alegreya', Georgia, serif;
 }
 
-h1, .h1 {
-  font-size: 2.4em;
+img {
+  max-width: 100%;
 }
 
-h2, .h2 {
-  font-size: 1.48em;
-}
-
-h3, .h3 {
-  font-size: 2em;
-}
-
-h4, .h4 {
-  font-size: 1.8em;
-}
-
-h5, .h5, h6, .h6 {
-  font-size: 1.6em;
-}
-
-p {
-  margin-bottom: 1.6em;
-}
-
-p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
-  margin-top: 1.6em;
+figcaption {
+  height: 40px;
+  margin: 12px 6px;
+  text-align: center;
 }
 
 a {
-  -webkit-transition: all 0.1s ease;
-  -moz-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-  color: steelblue;
-  text-decoration: none; }
-  a:hover, a:focus {
-    text-decoration: underline;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+       -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;
 }
 
-ul, ol, ul ul, ul ol, ol ol, ol ul {
-  padding-left: 1.2em;
-  margin-bottom: 1em;
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
-ul ul, ul ol, ol ol, ol ul {
-  margin-bottom: 0;
+ul {
+  padding: 0;
+  list-style-type: none;
 }
 
-body {
-  font-size: 23px;
-}
- 
-@media (max-width: 43em) {
-  body {
-    font-size: 18px;
-  }
-}
-
-.section-wrap {
-  max-width: 40em;
+.main-wrap {
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 50px 0 100px;
 }
 
-.page-wrap {
-padding-top: 3em;
+.univ-blue {
+  background-color: #58a2c4;
+}
+
+.univ-green {
+  background-color: #27ae60;
+}
+
+.univ-yellow {
+  background-color: #f1d432;
+}
+
+.univ-orange {
+  background-color: #cb461d;
+}
+
+.univ-violet {
+  background-color: #9b59b6;
 }
 
 /* HEADER --------------------------------------------------------- */
 
-.header .main-nav {
-float: right;
-width: 70%;
-text-align: right;
+header {
+  background-color: #efefee;
 }
 
-.header .main-nav ul {
+header #top-nav {
+  background-color: #efefee;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header #top-nav ul {
+  display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-.header .main-nav li {
-display: inline-block;
-margin-left: 5%;
+header #top-nav ul li {
+  display: inline;
+  margin: 0 12px;
 }
 
-.header a {
-color: #222;
+header a {
+  color: #333;
 }
 
-.header .main-nav a {
-font-style: italic;
+header #top-nav a {
+  display: inline-block;
+  padding: 12px;
+  color: #333;
+  font-size: 1rem;
 }
 
-/* PAGE ----------------------------------------------------------- */
+/* MAIN ----------------------------------------------------------- */
+
+#breadcrumb-nav ul{
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+#breadcrumb-nav ul li {
+  display: inline;
+  padding: 0 6px;
+}
+
+#breadcrumb-nav ul li:first-of-type {
+  padding: 0;
+}
+
+#breadcrumb-nav a {
+  margin-left: 12px;
+}
+
+#breadcrumb-nav ul > li:first-of-type a {
+  margin-left: 0;
+}
+
+
+/* Index Page */
+
+.article-extract-lead-title {
+  height: 290px;
+}
+
+.article-extract-lead {
+  margin-top: 0;
+  border-top: 12px solid #58a2c4;
+  margin-bottom: 24px;
+}
+
+.article-extract-lead span {
+  margin-bottom: 12px;
+  display: block;
+}
+
+
 
 .post {
-margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 .post-title, .page-title {
-position: relative;
-text-align: center;
-font-weight: normal;
+  position: relative;
+  text-align: center;
+  font-weight: normal;
 }
 
 .post-title {
-margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .post-title a {
-color: #222;
+  color: #333;
 }
 
 .date {
-display: block;
-text-align: center;
-font-style: italic;
-margin-bottom: 3em;
+  display: block;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 3em;
 }
 
 /* FOOTER --------------------------------------------------------- */
 
-.footer {
-padding: 4em 0;
-border-top: 1px solid rgba(0, 0, 0, 0.1);
-text-align: center;
+#desc-asso {
+  padding-top: 20px;
+  background-color: #efefee;
+  border-top: 1px solid #bdc3c7;
+}
+
+#desc-asso .footer-widgets {
+  font-weight: 400;
+}
+
+footer {
+  background-color: #efefee;
+  padding-top: 30px;
+}
+
+footer section {
+  padding: 24px 0;
+  border-top: 1px solid #bdc3c7;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.footer-widgets h3 {
+  padding-bottom: 18px;
+}
+
+.footer-widget p {
+  line-height: 30px;
 }
 
 .social-icons {
-width: 8em;
-margin: 0 auto;
-font-size: 1.8em;
+  width: 8em;
+  margin: 0 auto;
+  font-size: 1.8em;
 }
 
-.social-icons a {
-color: rgba(0, 0, 0, 0.1);
-display: inline-block;
-padding: 1px;
-margin-bottom: 0;
+#signature {
+  margin-top: 26px;
+  padding-bottom: 12px;
+  text-align: center;
 }
 
-.social-icons span {
-position: absolute;
-top: -9999px;
-left: -9999px;
+#signature span {
+  margin-right: 56px;
+}
+
+#signature ul{
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+#signature ul li {
+  display: inline;
+  padding: 0 6px;
+}
+
+#signature > a {
+  margin-left: 56px;
+}
+
+/* ===========================================================================*/
+/*                                                                            */
+/*                              RESPONSIVE CSS                                */
+/*                                                                            */
+/* ===========================================================================*/
+
+
+@media (min-width: 480px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+
+}
+
+@media (min-width: 600px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+
+}
+
+@media (min-width: 768px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+  
+}
+
+@media (min-width: 1024px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+  
+  .container {
+    max-width: 1100px;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+  
 }

@@ -1,0 +1,50 @@
+{# src/Anneaux/PortailBundle/Resources/views/CDR/imageShow.html.twig #}
+{% extends 'PortailBundle::layout.html.twig' %}
+
+{% block title %}
+  Centre de Ressources des Anneaux de la Mémoire
+{% endblock %}
+
+{% block body %}
+
+  <div class="row main-wrap" role="main">
+
+    {% block breadcrumb %}
+      <nav id="breadcrumb-nav" class="col-md-12" role="navigation">
+        <ul>
+          <li class=""><a href="/app_dev.php">Accueil</a></li>
+          <li class=""> &raquo; <a href="/app_dev.php/ressources">Nos ressources</a></li>
+          <li class=""> &raquo; <a href="/app_dev.php/ressources/images">Banque d'images et cartes</a></li>
+        </ul>
+      </nav>
+    {% endblock %}
+
+    <div class="col-md-12">
+      <article class="post type-post article-post group">
+        <h1 class="post-title">Viaduct</h1>
+        <time datetime="April 30, 2013">April 30, 2013</time>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+        <a href="#">
+          <img class="alignnone size-large" alt="bg-03" src="http://tinktank.in/demo/hammer-chisel/wp-content/uploads/2013/04/bg-03-1024x682.jpg" width="1024" height="682">
+        </a>
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing.</li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+          <li>Vestibulum auctor dapibus neque.</li>
+        </ol>
+        <blockquote>
+          <p>Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.<br><cite>The Times</cite>
+          </p>
+        </blockquote>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+          <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+
+      </article>
+    </div>
+
+  </div>
+{% endblock %}

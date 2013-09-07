@@ -9,9 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% block stylesheets %}
-  {% stylesheets 'bundles/portail/css/*' filter='cssrewrite' %}
+  {% stylesheets '@PortailBundle/Resources/public/css/*' filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}" />
   {% endstylesheets %}
+
   <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
 {% endblock %}
 
@@ -32,8 +33,9 @@
   {% block footer %}
   {% endblock %}
 
-  {% block javascripts %}
-  {% endblock %}
+  {% javascripts '@PortailBundle/Resources/public/js/*' %}
+      <script type="text/javascript" src="{{ asset_url }}"></script>
+  {% endjavascripts %}
 
 </body>
 </html>

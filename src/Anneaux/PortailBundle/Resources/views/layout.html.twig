@@ -2,41 +2,144 @@
 {% extends '::base.html.twig' %}
 
 {% block header %}
-  <header class="header" role="banner">
-    <div class="section-wrap group">
-      <a href="#">
-        <img src="http://tinktank.in/demo/balance/wp-content/uploads/2013/05/balance-logo.svg" alt="Logo" class="logo">
-      </a>
-      <nav class="main-nav" role="navigation">
-        <div class="menu-main_nav-container">
-          <ul id="menu-main_nav" class="menu">
-            <li class="">
-              <a href="#">Accueil</a>
-            </li>
-            <li class="">
-              <a href="#about/">A Propos</a>
-            </li>
-            <li class="">
-              <a href="#contact/">Contact</a>
-            </li>
-            <li class="">
-              <a href="#category/archive/">Archive</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <header role="banner">
+    <nav id="top-nav" role="navigation">
+      <ul>
+        <li><a href="/app_dev.php">Accueil</a></li>
+        <li><a href="/app_dev.php/asso" class="univ-blue">L'Association</a></li>
+        <li><a href="/app_dev.php/reseau" class="univ-blue">Le Réseau</a></li>
+        <li><a href="/app_dev.php/soutien">Nous Soutenir</a></li>
+        <li><a href="/app_dev.php/ressources" class="univ-green">Nos Ressources</a></li>
+        <li><a href="/app_dev.php/blog" class="univ-yellow">Le Blog</a></li>
+        <li><a href="/app_dev.php/archive/">Les Archives</a></li>
+      </ul>
+    </nav>
+    <!-- /.top-nav -->
+    <a href="#">
+      <img src="/" class="logo" height="530" width="100%" alt="Slider & Logo Anneaux de la Mémoire">
+    </a>    
   </header>
+  <!-- /.header -->
+{% endblock %}
+
+{% block body %}
 {% endblock %}
 
 {% block footer %}
-  <footer class="footer">
-    <section class="social-icons">
-      <a href="https://twitter.com/tinktankin" title="Twitter"><i aria-hidden="true" data-icon="t"></i><span>Twitter</span></a>
-      <a href="https://www.facebook.com/tinktankin" title="Facebook"><i aria-hidden="true" data-icon="f"></i><span>Facebook</span></a>
-      <a href="https://vimeo.com/tinktank" title="Vimeo"><i aria-hidden="true" data-icon="v"></i><span>Vimeo</span></a>
-      <a href="https://github.com/TinkTank" title="GitHub"><i aria-hidden="true" data-icon="h"></i><span>GitHub</span></a>
+
+  <div id="desc-asso">
+    <section class="container">
+      <div class="col-md-10 col-md-offset-1 footer-widgets">
+        <div class="col-md-4 footer-widget">
+          <h3>Qui sommes nous ?</h3>
+          <div class="textwidget">
+            <p>Duis non tellus tellus. Quisque vel mi magna, sollicitudin suscipit neque. Phasellus id eros et felis luctus sollicitudin. Integer commodo sem vel velit pharetra suscipit sit amet vitae augue. Duis tincidunt ornare facilisis.</p>
+          </div>
+        </div>
+        <!-- ./col-md-4 -->
+        <div class="col-md-4 footer-widget">
+          <h3>Un engagement citoyen</h3>
+          <div class="textwidget">
+            <p>Duis non tellus tellus. Quisque vel mi magna, sollicitudin suscipit neque. Phasellus id eros et felis luctus sollicitudin. Integer commodo sem vel velit pharetra suscipit sit amet vitae augue. Duis tincidunt ornare facilisis.</p>
+          </div>
+        </div>
+        <!-- ./col-md-4 -->
+        <div class="col-md-4 footer-widget last">
+          <h3>Notre présence sur le web</h3>
+          <div class="textwidget">
+            <p>Duis non tellus tellus. Quisque vel mi magna, sollicitudin suscipit neque. Phasellus id eros et felis luctus sollicitudin. Integer commodo sem vel velit pharetra suscipit sit amet vitae augue. Duis tincidunt ornare facilisis.</p>
+          </div>
+        </div>
+        <!-- ./col-md-4 -->
+      </div>
+      <!-- ./col-md-12 -->
     </section>
-    <small>© 2013 Anneaux de la Mémoire</small>
+  </div>
+  <!-- ./desc-asso -->
+
+  <footer>
+    <section class="container" role="navigation">
+      <nav class="col-md-12">
+        <div class="col-md-3 nav-list">
+          <h4>Association</h4>
+          <ul>
+            <li><a href="/app_dev.php/asso" title="">Présentation</a></a></li>
+            <li><a href="/app_dev.php/asso/historique" title="">Historique</a></li>
+            <li><a href="/app_dev.php/asso/diffusion" title="">Diffusion de la recherche scientifique</a></li>
+            <li><a href="/app_dev.php/asso/sensibilisation" title="">Activités de sensibilisation</a></li>
+            <li><a href="/app_dev.php/asso/cooperations" title="">Coopérations internationales</a></li>
+            <li><a href="/app_dev.php/asso/bibliotheque" title="">Bibliothèque de prêt</a></li>
+          </ul>
+        </div>
+        <!-- ./col-md-3 -->        
+        <div class="col-md-3 nav-list">
+          <h4>Reseau</h4>
+          <ul>
+            <li><a href="/app_dev.php/reseau" title="">Présentation</a></a></li>
+            <li><a href="/app_dev.php/reseau/historique" title="">Historique</a></li>
+            <li><a href="/app_dev.php/reseau/centre-de-ressources" title="">Centre de ressources</a></li>
+            <li><a href="/app_dev.php/reseau/acteurs" title="">Acteurs</a></li>
+          </ul>
+          <h4>Soutien</h4>
+          <ul>
+            <li><a href="/app_dev.php/soutien/donner" title="">Faire un don</a></li>
+            <li><a href="/app_dev.php/soutien/adherer" title="">Adhérer à l'soutienciation</a></li>
+            <li><a href="/app_dev.php/soutien/benevolat" title="">Devenir bénévole</a></li>
+            <li><a href="/app_dev.php/soutien/mecenat" title="">Mécénat entreprise</a></li>
+            <li><a href="/app_dev.php/blog/contact" title="">Envoyer une info</a></li>
+          </ul>
+        </div>
+        <!-- ./col-md-3 -->
+        <div class="col-md-3 nav-list">
+          <h4>Ressources web</h4>
+          <ul>
+            <li><a href="/app_dev.php/blog" title="">Blog et actualités</a></li>
+            <li><a href="/app_dev.php/jeunesse" title="">Jeune public</a></li>
+            <li><a href="/app_dev.php/ressources/articles" title="">Articles et publications</a></li>
+            <li><a href="/app_dev.php/ressources/conferences" title="">Conférences et colloques</a></li>
+            <li><a href="/app_dev.php/ressources/expos" title="">Expositions virtuelles</a></li>
+            <li><a href="/app_dev.php/ressources/visites" title="">Parcours de visite virtuelle</a></li>
+            <li><a href="/app_dev.php/ressources/images" title="">Banque d'images et cartes</a></li>
+            <li><a href="/app_dev.php/ressources/web" title="">Sites web et réseaux sociaux</a></li>
+            <li><a href="/app_dev.php/ressources/cultures" title="">Arts, cultures et esclavage</a></li>
+            <li><a href="/app_dev.php/ressources/sites" title="">Sites de mémoire</a></li>
+            <li><a href="/app_dev.php/ressources/presse" title="">Presse</a></li>
+          </ul>
+        </div>
+        <!-- ./col-md-3 -->        
+        <div class="col-md-3 nav-list">
+          <h4>La boutique</h4>
+          <ul>
+            <li><a href="#" title="">Accueil</a></a></li>
+            <li><a href="#" title="">Cahiers des Anneaux de la Mémoire</a></li>
+            <li><a href="#" title="">Catalogues et livrets</a></li>
+            <li><a href="#" title="">Multimédia</a></li>
+          </ul>
+          <h4>La boutique en location</h4>
+          <ul>
+            <li><a href="#" title="">Livret et CD-ROM pédagogique</a></li>
+            <li><a href="#" title="">Exposition itinérante</a></li>
+            <li><a href="#" title="">Mallette pédagogique</a></li>
+            <li><a href="#" title="">Visite guidée de Nantes</a></li>
+          </ul>
+        </div>
+        <!-- ./col-md-3 -->
+      </nav>
+      <!-- ./col-md-12 -->
+    </section>
+
+    <nav class="container" id="signature" role="navigation">
+      <span>© 2010-2013 Anneaux de la Mémoire</span>
+      <ul id="sign-nav">
+        <li><a href="#" title="">Accessibilité</a></li>
+        <li><a href="#" title="">Mentions légales</a></li>
+        <li><a href="#" title="">Plan du site</a></li>
+        <li><a href="#" title="">Connexion</a></li>        
+        <li><a href="#" title="">Contact</a></li>
+        <li><a href="#" title="">S'abonner à la newsletter</a></li>
+      </ul>
+      <a href="#">&uarr; Haut de page</a>
+    </nav>
+
   </footer>
 {% endblock %}

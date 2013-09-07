@@ -6,39 +6,14 @@ Author URI: http://neilorangepeel.com
 Version: 1
 */
 
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+img {
+  width: 100%;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-article, aside, figure, footer, header, hgroup, nav, section, img {
-  display: block;
-}
-
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
-
-html {
-  overflow-y: scroll;
-}
-
-[id*='attachment_'] {
-  max-width: 100% !important;
+figcaption {
+  height: 40px;
+  margin: 12px 6px;
+  text-align: center;
 }
 
 .group:after {
@@ -60,11 +35,12 @@ html {
   margin: 0 auto; 
 }
 
-.clear { clear: both;
+.clearfix {
+  clear: both;
 }
 
 html {
-  font: normal 112.5%/1.65 serif;
+  font: normal 100% serif;
 }
 
 body {
@@ -133,24 +109,14 @@ ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
 }
 
-body {
-  font-size: 23px;
-}
- 
-@media (max-width: 43em) {
-  body {
-    font-size: 18px;
-  }
-}
-
 .section-wrap {
-  max-width: 40em;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 20px;
 }
 
 .page-wrap {
-padding-top: 3em;
+padding-top: 60px 0;
 }
 
 /* HEADER --------------------------------------------------------- */
@@ -208,11 +174,54 @@ margin-bottom: 3em;
 
 /* FOOTER --------------------------------------------------------- */
 
-.footer {
-padding: 4em 0;
-border-top: 1px solid rgba(0, 0, 0, 0.1);
-text-align: center;
+footer {
+  border-top: 1px solid #ededed;
+  background-color: #FAFAFA;
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-widgets {
+  padding: 60px 0 0;
+}
+
+.footer-widget {
+  color: #4c4c4c;
+  margin-bottom: 40px;
+}
+
+.fwidget {
+margin-bottom: 65px;
+}
+
+.footer-widget h4.widgettitle {
+padding-bottom: 18px;
+color: #4c4c4c;
+font-size: 24px;
+font-weight: 300;
+}
+
+.footer-widget p {
+line-height: 30px;
+}
+
+.last {
+margin-right: 0px !important;
+clear: right;
+}
+
+[data-icon]::before {
+  position: relative;
+  content: attr(data-icon);
+  font-family: 'tinktankcons';
+  font-weight: 400 !important;
+  font-style: normal;
+  text-transform: none;
+  line-height: 0; }
 
 .social-icons {
 width: 8em;
@@ -228,7 +237,102 @@ margin-bottom: 0;
 }
 
 .social-icons span {
-position: absolute;
+/*position: absolute;
 top: -9999px;
-left: -9999px;
+left: -9999px;*/
+}
+
+#signature {
+  border-top: 1px solid #ededed;
+  padding: 1.4em;
+  text-align: center;
+}
+
+/* ===========================================================================*/
+/*                                                                            */
+/*                              RESPONSIVE CSS                                */
+/*                                                                            */
+/* ===========================================================================*/
+
+
+@media (min-width: 480px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+
+}
+
+@media (min-width: 600px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+
+}
+
+@media (min-width: 768px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+  
+}
+
+@media (min-width: 1024px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+  
+  .container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .footer-widgets {
+    padding: 80px 0 0;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+
+  /* HEADER ----------------------------------------------------------------- */
+
+  /* NAVBAR ----------------------------------------------------------------- */
+
+  /* SIDEBAR ---------------------------------------------------------------- */
+
+  /* MAIN ------------------------------------------------------------------- */
+
+  /* FOOTER ----------------------------------------------------------------- */
+  
 }
