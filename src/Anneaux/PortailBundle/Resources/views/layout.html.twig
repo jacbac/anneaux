@@ -5,19 +5,111 @@
   <header role="banner">
     <nav id="top-nav" role="navigation">
       <ul>
-        <li><a href="/app_dev.php">Accueil</a></li>
-        <li><a href="/app_dev.php/asso" class="univ-blue">L'Association</a></li>
-        <li><a href="/app_dev.php/reseau" class="univ-blue">Le Réseau</a></li>
-        <li><a href="/app_dev.php/soutien">Nous Soutenir</a></li>
-        <li><a href="/app_dev.php/ressources" class="univ-green">Nos Ressources</a></li>
-        <li><a href="/app_dev.php/blog" class="univ-yellow">Le Blog</a></li>
-        <li><a href="/app_dev.php/archive/">Les Archives</a></li>
+        <li><a href="/app_dev.php" class="univ-white">Accueil</a></li><!--
+     --><li class="dropdown">
+          <a data-toggle="dropdown" data-target="#" href="/app_dev.php/asso" class="univ-blue">L'Association <span class="caret"></span></a>
+          <ul class="dropdown-menu univ-blue" role="menu" aria-labelledby="asso">
+            <li><a href="/app_dev.php/asso" title="">Présentation</a></a></li>
+            <li><a href="/app_dev.php/asso/historique" title="">Historique</a></li>
+            <li><a href="/app_dev.php/asso/diffusion" title="">Diffusion de la recherche scientifique</a></li>
+            <li><a href="/app_dev.php/asso/sensibilisation" title="">Activités de sensibilisation</a></li>
+            <li><a href="/app_dev.php/asso/cooperations" title="">Coopérations internationales</a></li>
+            <li><a href="/app_dev.php/asso/bibliotheque" title="">Bibliothèque de prêt</a></li>
+          </ul>
+        </li><!--
+     --><li class="dropdown">
+          <a data-toggle="dropdown" data-target="#" href="/app_dev.php/reseau" class="univ-blue">Le Réseau <span class="caret"></span></a>
+          <ul class="dropdown-menu univ-blue" role="menu" aria-labelledby="reseau">
+            <li><a href="/app_dev.php/reseau" title="">Présentation</a></a></li>
+            <li><a href="/app_dev.php/reseau/historique" title="">Historique</a></li>
+            <li><a href="/app_dev.php/reseau/centre-de-ressources" title="">Centre de ressources</a></li>
+            <li><a href="/app_dev.php/reseau/acteurs" title="">Acteurs</a></li>
+          </ul>
+        </li><!--
+     --><li><a href="/app_dev.php/boutique/" class="univ-orange">La Boutique</a></li><!--
+     --><li class="dropdown">
+          <a data-toggle="dropdown" data-target="#" href="/app_dev.php/soutien" class="univ-orange">Nous Soutenir <span class="caret"></span></a>
+           <ul class="dropdown-menu univ-orange" role="menu" aria-labelledby="soutien">
+            <li><a href="/app_dev.php/soutien/donner" title="">Faire un don</a></li>
+            <li><a href="/app_dev.php/soutien/adherer" title="">Adhérer à l'association</a></li>
+            <li><a href="/app_dev.php/soutien/benevolat" title="">Devenir bénévole</a></li>
+            <li><a href="/app_dev.php/soutien/mecenat" title="">Mécénat entreprise</a></li>
+            <li><a href="/app_dev.php/blog/contact" title="">Envoyer une info</a></li>
+          </ul>
+        </li><!--
+     --><li><a href="/app_dev.php/contact" class="univ-orange">Nous Contacter</a></li><!--
+     --><li class="dropdown">
+          <a data-toggle="dropdown" data-target="#" href="/app_dev.php/ressources" class="univ-green">Nos Ressources <span class="caret"></span></a>
+          <ul class="dropdown-menu univ-green" role="menu" aria-labelledby="ressources">
+            <li><a href="/app_dev.php/blog" title="">Blog et actualités</a></li>
+            <li><a href="/app_dev.php/jeunesse" title="">Jeune public</a></li>
+            <li><a href="/app_dev.php/ressources/articles" title="">Articles et publications</a></li>
+            <li><a href="/app_dev.php/ressources/conferences" title="">Conférences et colloques</a></li>
+            <li><a href="/app_dev.php/ressources/expos" title="">Expositions virtuelles</a></li>
+            <li><a href="/app_dev.php/ressources/visites" title="">Parcours de visite virtuelle</a></li>
+            <li><a href="/app_dev.php/ressources/sites" title="">Sites et tourisme de mémoire</a></li>            
+            <li><a href="/app_dev.php/ressources/images" title="">Banque d'images et cartes</a></li>
+            <li><a href="/app_dev.php/ressources/web" title="">Sites web et réseaux sociaux</a></li>
+            <li><a href="/app_dev.php/ressources/cultures" title="">Arts, cultures et esclavage</a></li>
+            <li><a href="/app_dev.php/ressources/presse" title="">Espace Presse</a></li>
+          </ul>
+        </li><!--
+     --><li><a href="/app_dev.php/blog" class="univ-yellow">Le Blog</a></li>
       </ul>
     </nav>
     <!-- /.top-nav -->
-    <a href="#">
-      <img src="/" class="logo" height="530" width="100%" alt="Slider & Logo Anneaux de la Mémoire">
-    </a>    
+    <div id="top-carousel" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#top-carousel" data-slide-to="1"></li>
+        <li data-target="#top-carousel" data-slide-to="2"></li>
+        <li data-target="#top-carousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="http://placehold.it/1200x460" class="logo" height="460" width="100%" alt="Logo Anneaux de la Mémoire">
+          <div class="carousel-caption">
+            <h3>Bienvenue !</h3>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="http://placehold.it/1200x460" class="logo" height="460" width="100%" alt="Slide 2 Anneaux de la Mémoire">
+          </a>
+          <div class="carousel-caption">
+            <h3>Slide 2</h3>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="http://placehold.it/1200x460" class="logo" height="460" width="100%" alt="Slide 3 Anneaux de la Mémoire">
+          </a>
+          <div class="carousel-caption">
+            <h3>Slide 3</h3>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="http://placehold.it/1200x460" class="logo" height="460" width="100%" alt="Slide 4 Anneaux de la Mémoire">
+          </a>
+          <div class="carousel-caption">
+            <h3>Slide 4</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#top-carousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#top-carousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
+    </div>
+    <!-- /.carousel -->
   </header>
   <!-- /.header -->
 {% endblock %}
@@ -83,7 +175,7 @@
           <h4>Soutien</h4>
           <ul>
             <li><a href="/app_dev.php/soutien/donner" title="">Faire un don</a></li>
-            <li><a href="/app_dev.php/soutien/adherer" title="">Adhérer à l'soutienciation</a></li>
+            <li><a href="/app_dev.php/soutien/adherer" title="">Adhérer à l'association</a></li>
             <li><a href="/app_dev.php/soutien/benevolat" title="">Devenir bénévole</a></li>
             <li><a href="/app_dev.php/soutien/mecenat" title="">Mécénat entreprise</a></li>
             <li><a href="/app_dev.php/blog/contact" title="">Envoyer une info</a></li>
@@ -99,11 +191,11 @@
             <li><a href="/app_dev.php/ressources/conferences" title="">Conférences et colloques</a></li>
             <li><a href="/app_dev.php/ressources/expos" title="">Expositions virtuelles</a></li>
             <li><a href="/app_dev.php/ressources/visites" title="">Parcours de visite virtuelle</a></li>
+            <li><a href="/app_dev.php/ressources/sites" title="">Sites et tourisme de mémoire</a></li>            
             <li><a href="/app_dev.php/ressources/images" title="">Banque d'images et cartes</a></li>
             <li><a href="/app_dev.php/ressources/web" title="">Sites web et réseaux sociaux</a></li>
             <li><a href="/app_dev.php/ressources/cultures" title="">Arts, cultures et esclavage</a></li>
-            <li><a href="/app_dev.php/ressources/sites" title="">Sites de mémoire</a></li>
-            <li><a href="/app_dev.php/ressources/presse" title="">Presse</a></li>
+            <li><a href="/app_dev.php/ressources/presse" title="">Espace Presse</a></li>
           </ul>
         </div>
         <!-- ./col-md-3 -->        

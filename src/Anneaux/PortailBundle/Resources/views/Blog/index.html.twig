@@ -6,30 +6,84 @@
 {% endblock %}
 
 {% block body %}
-  <div class="section-wrap page-wrap">
-    <article class="post">
-      <h1 class="post-title">Les derniers articles du blog</h1>
-      {% for blog in blogs %}
-        <div>
-          <p>Auteur : 
-            <a href="/blog/auteur/bachelier-jacques/" rel="tag">{{ blog.auteur }}</a>
-          </p>
-          <p>Publié le : 
-            <a href="/blog/date/{{ blog.created|date('Y-m-d') }}" rel="tag">{{ blog.created|date('j F Y') }}</a>
-          </p>
-          <p>Mots-clefs : 
-            <a href="/blog/tag/blog/" rel="tag">blogz</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a>
-          </p>            
+<div role="main">
+
+  <section id="blog" class="large-wrap blog-index">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="title univ-yellow">
+              <h1>Derniers articles du blog</h1>
+            </div>
+            <div class="side-paginate">
+              <a href="#"> &laquo; Précédents</a>
+              <a href="#">Suivants &raquo;</a>
+            </div>
+            <div class="side-search">
+              <input type="search" placeholder="Rechercher"/>
+            </div>
+            <div class="side-twitter">
+              <ul class="tweet-list">
+                <li class="tweet clear no-avatar no-username" id="522cfaade4b0af32e7363764">
+                  <div class="tweet-text-wrapper">
+                    <div class="tweet-text">RT @<a class="tweet-url username" href="https://twitter.com/edzitron" rel="nofollow">edzitron</a>: So what you're saying is that this techcrunch disrupt was not the right one to launch my horse racing social network raci.sm</div>
+                    <time class="tweet-timestamp" datetime="2013-09-08"><a target="new" href="http://twitter.com/GlennF/status/376834661327982593"><span class="timesince" data-date="1378679359000">about 29 minutes ago</span></a></time>
+                  </div>
+                </li>
+                <li class="tweet clear no-avatar no-username" id="522cfaade4b0af32e7363765">
+                  <div class="tweet-text-wrapper">
+                    <div class="tweet-text">RT @<a class="tweet-url username" href="https://twitter.com/holman" rel="nofollow">holman</a>: how do i unsubscribe from the tech industry</div>
+                    <time class="tweet-timestamp" datetime="2013-09-08"><a target="new" href="http://twitter.com/GlennF/status/376833368005935104"><span class="timesince" data-date="1378679050000">about 34 minutes ago</span></a></time>
+                  </div>
+                </li>
+                <li class="tweet clear no-avatar no-username" id="522cfaade4b0af32e7363766">
+                  <div class="tweet-text-wrapper">
+                    <div class="tweet-text">RT @<a class="tweet-url username" href="https://twitter.com/Rep_of_Kelly" rel="nofollow">Rep_of_Kelly</a>: @<a class="tweet-url username" href="https://twitter.com/inthefade" rel="nofollow">inthefade</a> Don't blame men for female short comings.  Nobody's stopping women from gaining any job as long as they have the ability</div>
+                    <time class="tweet-timestamp" datetime="2013-09-08"><a target="new" href="http://twitter.com/GlennF/status/376831908505604096"><span class="timesince" data-date="1378678702000">about 40 minutes ago</span></a></time>
+                  </div>
+                </li>
+                <li class="tweet clear no-avatar no-username" id="522cf76be4b0508de65038d4">
+                  <div class="tweet-text-wrapper">
+                    <div class="tweet-text">RT @<a class="tweet-url username" href="https://twitter.com/hunterwalk" rel="nofollow">hunterwalk</a>: Life is sometimes one big PSA for @<a class="tweet-url username" href="https://twitter.com/GirlsWhoCode" rel="nofollow">GirlsWhoCode</a></div>
+                    <time class="tweet-timestamp" datetime="2013-09-08"><a target="new" href="http://twitter.com/GlennF/status/376831316899008512"><span class="timesince" data-date="1378678561000">about 42 minutes ago</span></a></time>
+                  </div>
+                </li>
+                <li class="tweet clear no-avatar no-username" id="522cf76be4b0508de65038db">
+                  <div class="tweet-text-wrapper">
+                    <div class="tweet-text">RT @<a class="tweet-url username" href="https://twitter.com/Mike_FTW" rel="nofollow">Mike_FTW</a>: Hey guys women in tech get emailed rape and death threats and LOL LET’S MAKE A PARODY AND THEN SCREAM ABOUT OUR FIRST AMENDMENT RIGHTS!</div>
+                    <time class="tweet-timestamp" datetime="2013-09-08"><a target="new" href="http://twitter.com/GlennF/status/376831283877269504"><span class="timesince" data-date="1378678553000">about 42 minutes ago</span></a></time>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              {% for blog in blogs %}
+                {% if loop.index is odd %}
+                  <div class="col-md-6">
+                {% endif %}
+                <div class="blog-entry">
+                  <h2>{{ blog.title }}</h2>
+                  {% if blog.updated > blog.created %}
+                    <span id="date-updated">(Dernière révision le <a href="/blog/date/{{ blog.updated|date('Y-m-d') }}" rel="updated"><time datetime="{{ blog.updated|date('Y-m-d') }}">{{ blog.updated|date('j F Y') }}</time></a>)</span>
+                  {% endif %}                  
+                  <span id="date-created">Publié le <a href="/blog/date/{{ blog.created|date('Y-m-d') }}" rel="created"><time datetime="{{ blog.created|date('Y-m-d') }}">{{ blog.created|date('j F Y') }}</time></a></span>                  
+                  <span id="author">Par : <a href="/blog/auteur/bachelier-jacques/" rel="author">{{ blog.auteur }}</a></span>
+                  <p>{{ blog.blog | truncate(240, true, '...') }}</p>
+                  <span id="tag">Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blogz</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></span>
+                  <a href="#">Lire la suite &raquo;</a>
+                </div>
+                {% if loop.index is even %}
+                  </div>
+                {% endif %}                
+              {% endfor %}
+            </div>
+          </div>
         </div>
-      {% endfor %}
-    </article>
-    <div class="pagination group">
-      <p class="alignleft">
-         <a href="blog/1/">&laquo; Article précédent</a>
-      </p>
-      <p class="alignright">
-        <a href="blog/2/">Article suivant &raquo;</a>
-      </p>
+      </div>
     </div>
-  </div>
+  </section>
+</div>
 {% endblock %}
