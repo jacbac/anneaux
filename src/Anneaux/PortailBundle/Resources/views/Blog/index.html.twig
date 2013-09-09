@@ -70,8 +70,8 @@
                     <span id="date-updated">(Dernière révision le <a href="/blog/date/{{ blog.updated|date('Y-m-d') }}" rel="updated"><time datetime="{{ blog.updated|date('Y-m-d') }}">{{ blog.updated|date('j F Y') }}</time></a>)</span>
                   {% endif %}                  
                   <span id="date-created">Publié le <a href="/blog/date/{{ blog.created|date('Y-m-d') }}" rel="created"><time datetime="{{ blog.created|date('Y-m-d') }}">{{ blog.created|date('j F Y') }}</time></a></span>                  
-                  <span id="author">Par : <a href="/blog/auteur/bachelier-jacques/" rel="author">{{ blog.auteur }}</a></span>
-                  <p>{{ blog.blog | truncate(240, true, '...') }}</p>
+                  <span id="author">Par : <a href="/blog/auteur/bachelier-jacques/" rel="author">{{ blog.author }}</a></span>
+                  <p>{{ blog.text | truncate(240, true, '...') }}</p>
                   <span id="tag">Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blogz</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></span>
                   <a href="#">Lire la suite &raquo;</a>
                 </div>

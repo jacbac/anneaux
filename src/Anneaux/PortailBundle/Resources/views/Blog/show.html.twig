@@ -10,13 +10,13 @@
     <article class="post">
       <h1 class="post-title">{{ blog.title }}</h1>
       <time class="date" datetime="{{ blog.created|date('c') }}">Publié le {{ blog.created|date('j F Y') }}</time>
-      <p>{{ blog.blog }}</p>
+      <p>{{ blog.text }}</p>
       <p>
         <a href="#">
           <img src="http://placehold.it/600x400.png" data-1x="http://placehold.it/900x600.png" data-2x="http://placehold.it/600x400.png" width="1024" height="682" alt="picto">
         </a>
       </p>
-      <p>Auteur : <a href="/blog/auteur/bachelier-jacques/" rel="tag">{{ blog.auteur }}</a></p>
+      <p>Auteur : <a href="/blog/auteur/bachelier-jacques/" rel="tag">{{ blog.author }}</a></p>
       <p>Publié le : <a href="/blog/date/{{ blog.created|date('Y-m-d') }}" rel="tag">{{ blog.created|date('j F Y') }}</a></p>
       <p>Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blogz</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></p>
     </article>

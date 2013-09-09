@@ -26,21 +26,33 @@ class Blog
   /**
    * @ORM\Column(type="string", length=60)
    */
-  protected $auteur;
+  protected $author;
+
+  protected $excerpt;
 
   /**
    * @ORM\Column(type="text")
    */
-  protected $blog;
+  protected $text;
 
   /**
    * @ORM\Column(type="string", length=60)
    */
   protected $image;
 
-  protected $tags;
 
-  protected $comments;
+
+
+  protected $tags;  // relation
+
+  protected $state; // non-publié, en relecture demandée, en brouillon, en attente; publié; archivé
+
+  protected $version; // numéro de version (nécessite de dupliquer l'entrée de la BDD à chaque nouvelle version ?)
+  // archive de 5 versions ? suppression des 2 plus anciennes versions au bout de 3 mois si pas utilisée ?
+
+  protected $isStar;  // est mis en avant, à la Une, dans bloc spéciale, surcharge le tri par ordre date ou alphabétique
+
+  protected $comments; // relation
 
   /**
    * @ORM\Column(type="datetime")
@@ -91,49 +103,49 @@ class Blog
   }
 
   /**
-   * Set auteur
+   * Set author
    *
-   * @param string $auteur
+   * @param string $author
    * @return Blog
    */
-  public function setAuteur($auteur)
+  public function setAuthor($author)
   {
-      $this->auteur = $auteur;
+      $this->author = $author;
   
       return $this;
   }
 
   /**
-   * Get auteur
+   * Get author
    *
    * @return string 
    */
-  public function getAuteur()
+  public function getAuthor()
   {
-      return $this->auteur;
+      return $this->author;
   }
 
   /**
-   * Set blog
+   * Set text
    *
-   * @param string $blog
+   * @param string $text
    * @return Blog
    */
-  public function setBlog($blog)
+  public function setText($text)
   {
-      $this->blog = $blog;
+      $this->text = $text;
   
       return $this;
   }
 
   /**
-   * Get blog
+   * Get text
    *
    * @return string 
    */
-  public function getBlog()
+  public function getText()
   {
-      return $this->blog;
+      return $this->text;
   }
 
   /**

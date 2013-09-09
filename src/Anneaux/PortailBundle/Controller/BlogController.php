@@ -12,6 +12,7 @@ class BlogController extends Controller
     $em = $this->getDoctrine()->getManager();
 
     $blogs = $em->getRepository('PortailBundle:Blog')->findAll();
+    // $tags  = $em->getRepository('PortailBundle:Blog')->findAll();
 
     if (!$blogs)
     {
