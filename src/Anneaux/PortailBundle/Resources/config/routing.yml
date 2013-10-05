@@ -22,12 +22,18 @@ cdr_imageShow:
 blog_index:
   pattern:  /blog
   defaults: 
-    _controller: PortailBundle:Blog:index
+    _controller: PortailBundle:Article:index
 
 blog_show:
-  pattern:  /blog/{id}
+  pattern:  /blog/{slug}
   defaults:
-    _controller: PortailBundle:Blog:show
+    _controller: PortailBundle:Article:show
   requirements:
     _method:  GET
-    id: \d+
+
+blog_search:
+  pattern:  /blog/search/{slug}
+  defaults:
+    _controller: PortailBundle:Article:search
+  requirements:
+    _method:  GET

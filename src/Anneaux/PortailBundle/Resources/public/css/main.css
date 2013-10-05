@@ -104,13 +104,12 @@ header #top-nav {
 }
 
 header #top-nav > ul {
-  display: inline-block;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header #top-nav > ul > li {
-  display: inline;
+  display: inline-block;
 }
 
 header a {
@@ -119,7 +118,7 @@ header a {
 
 header #top-nav > ul > li > a {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 22px;
   color: #333;
   font-size: 1rem;
 }
@@ -333,8 +332,8 @@ header #top-nav > ul > li > ul {
   float: right;
 }
 
-.blog-index #author,
-.blog-index #tag {
+.blog-index .authors,
+.blog-index .tags {
   margin-bottom: 12px;
 }
 

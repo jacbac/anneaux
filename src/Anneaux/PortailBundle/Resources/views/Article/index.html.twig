@@ -57,23 +57,40 @@
                 </li>
               </ul>
             </div>
+            <div class="side-tags">
+              {% for tag in tags %}
+                <a href="{{ path('blog_search', {'slug': tag.slug }) }}" rel="tag">{{ tag.name }}</a> | 
+              {% endfor %}
+            </div>
           </div>
           <div class="col-md-9">
             <div class="row">
-              {% for blog in blogs %}
+              {% for article in articles %}
                 {% if loop.index is odd %}
                   <div class="col-md-6">
                 {% endif %}
                 <div class="blog-entry">
-                  <h2>{{ blog.title }}</h2>
-                  {% if blog.updated > blog.created %}
-                    <span id="date-updated">(Dernière révision le <a href="/blog/date/{{ blog.updated|date('Y-m-d') }}" rel="updated"><time datetime="{{ blog.updated|date('Y-m-d') }}">{{ blog.updated|date('j F Y') }}</time></a>)</span>
+                  <h2>{{ article.title }}</h2>
+                  {% if article.updated > article.created %}
+                    <span id="date-updated">(Dernière révision le <a href="{{ path('blog_search', {'slug': article.updated|date('Y-m-d') }) }}" rel="updated"><time datetime="{{ article.updated|date('Y-m-d') }}">{{ article.updated|date('j F Y') }}</time></a>)</span>
                   {% endif %}                  
-                  <span id="date-created">Publié le <a href="/blog/date/{{ blog.created|date('Y-m-d') }}" rel="created"><time datetime="{{ blog.created|date('Y-m-d') }}">{{ blog.created|date('j F Y') }}</time></a></span>                  
-                  <span id="author">Par : <a href="/blog/auteur/bachelier-jacques/" rel="author">{{ blog.author }}</a></span>
-                  <p>{{ blog.text | truncate(240, true, '...') }}</p>
-                  <span id="tag">Mots-clefs : <a href="/blog/tag/blog/" rel="tag">blogz</a> ; <a href="/blog/tag/portail/" rel="tag">portail</a></span>
-                  <a href="#">Lire la suite &raquo;</a>
+                  <span id="date-created">Publié le 
+                    <a href="{{ path('blog_search', {'slug': article.created|date('Y-m-d') }) }}" rel="created">
+                      <time datetime="{{ article.created|date('Y-m-d') }}">{{ article.created|date('j F Y') }}</time>
+                    </a>
+                  </span>
+                  <span class="authors">Par : 
+                  {% for author in article.authors %}
+                    <a href="{{ path('blog_search', {'slug': author.slug }) }}" rel="author">{{ author.firstname }} {{ author.lastname }}</a> | 
+                  {% endfor %}
+                  </span>
+                  <p>{{ article.content | truncate(240, true, '...') }}</p>
+                  <span class="tags">Mots-clefs : 
+                  {% for tag in article.tags %}
+                    <a href="{{ path('blog_search', {'slug': tag.slug }) }}" rel="tag">{{ tag.name }}</a> | 
+                  {% endfor %}
+                  </span>
+                  <a href="{{ path('blog_show', {'slug': article.slug}) }}">Lire la suite &raquo;</a>
                 </div>
                 {% if loop.index is even %}
                   </div>

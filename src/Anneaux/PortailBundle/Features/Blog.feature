@@ -19,3 +19,25 @@ Scenario: The blog index pages have tag links
    Then I should see a "" element
     And I should see a "" element
     And I should see a "" element
+
+Feature: Create new blog pages
+  In order to create a new blog page
+  As an administrator
+  I have to 
+
+Scenario: 
+  Given 
+   Then 
+    And 
+    And 
+
+Feature: Edit blog pages
+  In order to edit a blog page
+  As an administrator
+  I have to 
+
+Scenario: 
+  Given 
+   Then 
+    And 
+    And 

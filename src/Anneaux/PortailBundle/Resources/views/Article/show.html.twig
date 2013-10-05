@@ -1,0 +1,51 @@
+{# src/Anneaux/PortailBundle/Resources/views/Blog/show.html.twig #}
+{% extends 'PortailBundle::layout.html.twig' %}
+
+{% block title %}
+  Blog - {{ article.title }}
+{% endblock %}
+
+{% block body %}
+  <div class="section-wrap page-wrap">
+    <article class="post">
+      <h1 class="post-title">{{ article.title }}</h1>
+      {% if article.updated > article.created %}
+        <span id="date-updated">(Dernière révision le <a href="{{ path('blog_search', {'slug': article.updated|date('Y-m-d') }) }}" rel="updated"><time datetime="{{ article.updated|date('Y-m-d') }}">{{ article.updated|date('j F Y') }}</time></a>)</span>
+      {% endif %}                  
+      <span id="date-created">Publié le 
+        <a href="{{ path('blog_search', {'slug': article.created|date('Y-m-d') }) }}" rel="created">
+          <time datetime="{{ article.created|date('Y-m-d') }}">{{ article.created|date('j F Y') }}</time>
+        </a>
+      </span>
+      <p>{{ article.content }}</p>
+      <p>
+        <a href="#">
+          <img src="http://placehold.it/600x400.png" data-1x="http://placehold.it/900x600.png" data-2x="http://placehold.it/600x400.png" width="1024" height="682" alt="picto">
+        </a>
+      </p>
+      <span class="authors">Par : 
+      {% for author in article.authors %}
+        <a href="{{ path('blog_search', {'slug': author.slug }) }}" rel="author">{{ author.firstname }} {{ author.lastname }}</a> | 
+      {% endfor %}
+      </span>
+      <span id="date-created">Publié le 
+        <a href="{{ path('blog_search', {'slug': article.created|date('Y-m-d') }) }}" rel="created">
+          <time datetime="{{ article.created|date('Y-m-d') }}">{{ article.created|date('j F Y') }}</time>
+        </a>
+      </span>
+      <span class="tags">Mots-clefs : 
+      {% for tag in article.tags %}
+        <a href="{{ path('blog_search', {'slug': tag.slug }) }}" rel="tag">{{ tag.name }}</a> | 
+      {% endfor %}
+      </span>
+    </article>
+    <div class="pagination group">
+      <p class="alignleft">
+        <a href="1/">&laquo; Article précédent</a>
+      </p>
+      <p class="alignright">
+        <a href="2/">Article suivant &raquo;</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
