@@ -23,17 +23,17 @@ Go to your favorite dev directory (like '/home/goofy/awesome_project') then
 > git clone https://github.com/jacbac/anneaux.git
 
 
-
 ### Use Composer (*recommended*)
 
 You can use composer to get an updated project and (also) to install all the necessary dependencies.
 
 If you don't have Composer yet, download it following the instructions on [getcomposer.org][2] or just run the following command in the 'anneaux' directory:
 
-> curl -s http://getcomposer.org/installer | php
-> php composer.phar update
-> php composer.phar install
-
+```
+curl -s http://getcomposer.org/installer | php
+php composer.phar update
+php composer.phar install
+```
 
 
 ### Checking your System Configuration
@@ -82,12 +82,13 @@ In /etc/apache2/sites-available directory (linux user), create a new vhost file:
 
 and copy this:
 
+```
 <VirtualHost *:80>
       ServerName anneaux
-      DocumentRoot /home/goofy/awesome_project/anneaux/web
+      DocumentRoot /home/[USER]/[YOUR_WORKSPACE]/anneaux/web
 
       DirectoryIndex app.php
-      <Directory /home/thomas/perso/anneaux/web/>
+      <Directory /home/[USER]/[YOUR_WORKSPACE]/anneaux/web/>
               Options Indexes FollowSymLinks MultiViews
               AllowOverride All
               Allow from All
@@ -96,7 +97,7 @@ and copy this:
       ErrorLog /var/log/apache2/error.anneaux.log
       CustomLog /var/log/apache2/access.anneaux.log combined
 </VirtualHost>
-
+```
 
 ### Creating your database
 
