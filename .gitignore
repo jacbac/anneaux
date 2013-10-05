@@ -17,4 +17,12 @@ app/config/parameters.yml
 Thumbs.db
 *~
 
+.sonar/
+behat.phar
+sonar-project.properties
+symfony2_extension.phar
+web/css/
+web/js/
+
+
 !*.gitkeep
